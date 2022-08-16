@@ -5,7 +5,6 @@ import { FaBed, FaBath } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import { millify } from 'millify';
-import { defaultImage } from '../assets/images/house.jpg';
 
 const Property = ({
   property: {
@@ -34,7 +33,7 @@ const Property = ({
       <Box cursor="pointer">
         <Image
           className="property-img"
-          src={coverPhoto ? coverPhoto.url : defaultImage}
+          src={coverPhoto.url}
           width={400}
           height={260}
           alt="house"
