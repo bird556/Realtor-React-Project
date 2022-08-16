@@ -7,7 +7,7 @@ import { BsFilter } from 'react-icons/bs';
 import Property from '../components/Property';
 import SearchFilters from '../components/SearchFilters';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
-import noresult from '../assets/images/noresult.svg';
+import noresults from '../assets/images/noresults.svg';
 
 const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
@@ -47,7 +47,7 @@ const Search = ({ properties }) => {
           marginTop="5"
           marginBottom="5"
         >
-          <Image src={noresult} alt="no results found" />
+          <Image src={noresults} alt="no results found" />
           <Text fontSize="xl" marginTop="3">
             No Result Found.
           </Text>
