@@ -52,12 +52,7 @@ const Banner = ({
 
 //
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  console.log(propertiesForRent);
-  // console.log(
-  //   propertiesForRent.map((item) => {
-  //     return console.log(item.price * 0.35861074);
-  //   })
-  // );
+
   return (
     <Box>
       <Banner
