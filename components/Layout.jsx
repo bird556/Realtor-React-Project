@@ -6,6 +6,7 @@ const Layout = ({ children }) => (
   <>
     <Head>
       <title>Real Estate</title>
+      <link rel="shortcut icon" href="realestatelogo.png" type="image/x-icon" />
     </Head>
     <Box maxWidth="1280px" m="auto">
       <header>

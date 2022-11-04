@@ -4,6 +4,7 @@ import { Flex, Box, Text, Button } from '@chakra-ui/react';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/Property';
 //
+
 const Banner = ({
   purpose,
   title1,
@@ -51,6 +52,12 @@ const Banner = ({
 
 //
 export default function Home({ propertiesForSale, propertiesForRent }) {
+  console.log(propertiesForRent);
+  // console.log(
+  //   propertiesForRent.map((item) => {
+  //     return console.log(item.price * 0.35861074);
+  //   })
+  // );
   return (
     <Box>
       <Banner
@@ -61,7 +68,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         desc2="and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
-        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/170789642/1ce161680fb5454fa83d4c1d450c6031"
       />
       <Flex flexWrap="wrap" justifyContent="center">
         {propertiesForRent.map((property) => (
@@ -78,7 +85,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         linkName="/search?purpose=for-sale"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
       />
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" justifyContent="center">
         {propertiesForSale.map((property) => (
           <Property property={property} key={property.id} />
         ))}

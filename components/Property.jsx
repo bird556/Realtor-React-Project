@@ -5,8 +5,7 @@ import { FaBed, FaBath } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import { millify } from 'millify';
-import { defaultImage } from '../assets/images/house.jpg';
-
+import DefaultImage from '../assets/images/torontohome.jpg';
 const Property = ({
   property: {
     coverPhoto,
@@ -33,11 +32,10 @@ const Property = ({
     >
       <Box cursor="pointer">
         <Image
-          className="property-img"
-          src={coverPhoto ? coverPhoto.url : defaultImage}
+          alt="home"
+          src={coverPhoto ? coverPhoto.url : DefaultImage}
           width={400}
           height={260}
-          alt="house"
         />
       </Box>
       <Box w="full">
@@ -47,7 +45,8 @@ const Property = ({
               {isVerified && <GoVerified />}
             </Box>
             <Text fontWeight="bold" fontSize="lg">
-              AED {millify(price)} {rentFrequency && `/${rentFrequency}`}
+              CAD ${millify(price * 0.35861074)}{' '}
+              {rentFrequency && `/${rentFrequency}`}
             </Text>
           </Flex>
           <Box>
